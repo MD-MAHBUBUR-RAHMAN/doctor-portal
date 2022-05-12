@@ -1,15 +1,19 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "hero-pattern": "url('/src/assets/images/chair.png')",
+      },
+    },
   },
   daisyui: {
     themes: [
       {
         mytheme: {
           primary: "#19D3C1",
-          secondary: "#f6d860",
-          accent: "#37cdbe",
+          secondary: "#19D3AE",
+          accent: "#3A4256",
           neutral: "#3d4451",
           "base-100": "#ffffff",
         },

@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Home from "./Page/Home/Home/Home";
+import Home from "./Page/Home/Home";
 import About from "./Page/About/About";
 import Nav from "./Page/Shared/Nav";
 import Login from "./Page/Login/Login";
@@ -8,7 +8,7 @@ import NotFound from "./Page/Notfound/NotFound";
 
 function App() {
   return (
-    <div className="">
+    <div className="2xl:w-[1450px] 2xl:mx-auto border">
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
