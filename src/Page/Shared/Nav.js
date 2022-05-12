@@ -26,10 +26,12 @@ const Nav = () => {
   );
   return (
     <div className="navbar">
-      <div className="navbar-start">
-        <a className="btn btn-ghost normal-case text-xl">Doctors Portal</a>
+      <div className="navbar-start w-full flex justify-between">
+        <Link to="/" className="btn btn-ghost normal-case text-xl">
+          Doctors Portal
+        </Link>
         <div className="dropdown">
-          <label tabIndex="0" className="btn btn-ghost lg:hidden">
+          <label tabIndex="0" className="btn btn-ghost md:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -53,7 +55,7 @@ const Nav = () => {
           </ul>
         </div>
       </div>
-      <div className="navbar-end hidden lg:flex">
+      <div className="navbar-end hidden md:flex">
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>
       </div>
     </div>
