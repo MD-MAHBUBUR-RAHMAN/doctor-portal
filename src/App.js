@@ -5,6 +5,7 @@ import About from "./Page/About/About";
 import Nav from "./Page/Shared/Nav";
 import Login from "./Page/Login/Login";
 import NotFound from "./Page/Notfound/NotFound";
+import Appointment from "./Page/Appointment/Appointment";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/appointment" element={<Appointment />} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -10,15 +10,15 @@ const MakeappointmentHome = () => {
       style={{
         backgroundImage: `url(${appointment})`,
       }}
-      className="md:flex sm:items-center"
+      className="flex items-center"
     >
-      <div className="hidden md:block sm:flex-1  mt-[-100px]">
-        <img src={doctorSmall} alt="" className="" />
+      <div className=" flex-1 hidden lg:block">
+        <img src={doctorSmall} alt="" className="mt-[-100px]" />
       </div>
-      <div className="sm:flex-1 text-white leading-loose py-[72px] px-7 md:pr-32">
+      <div className="flex-1 text-white p-5">
         <h3 className="text-primary text-xl font-bold">Appointment</h3>
-        <h2 className="text-2xl md:text-4xl">Make an appointment Today</h2>
-        <p>
+        <h2 className="text-2xl md:text-4xl py-5">Make an appointment Today</h2>
+        <p className="pb-5">
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout. The point of
           using Lorem Ipsumis that it has a more-or-less normal distribution of

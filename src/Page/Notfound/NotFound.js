@@ -1,9 +1,10 @@
 import React from "react";
+import notfound from "../../assets/images/dribbble_1.gif";
 
 const NotFound = () => {
   return (
-    <div className="text-4xl text-center text-red-600">
-      <h1>404</h1>
+    <div className="h-screen flex items-center justify-center">
+      <img src={notfound} alt="" />
     </div>
   );
 };
