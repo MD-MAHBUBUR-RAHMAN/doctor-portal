@@ -17,9 +17,9 @@ const Login = () => {
     formState: { errors },
     handleSubmit,
   } = useForm();
-  let navigate = useNavigate();
-  let location = useLocation();
-  let from = location.state?.from?.pathname || "/";
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
   let signInError;
   if (emailError || error) {
