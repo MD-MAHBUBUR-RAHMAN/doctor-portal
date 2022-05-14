@@ -11,7 +11,13 @@ const Footer = () => {
         backgroundSize: "cover",
       }}
     >
-      <footer className="footer p-12">
+      <footer
+        // style={{
+        //   backgroundImage: `url(${footer})`,
+        //   backgroundSize: "cover",
+        // }}
+        className="footer p-12"
+      >
         <div>
           <span className="footer-title">Services</span>
           <Link to="" className="link link-hover">
