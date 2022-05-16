@@ -20,6 +20,11 @@ const Nav = () => {
       <li>
         <Link to="/review">Reviews</Link>
       </li>
+      {user && (
+        <li>
+          <Link to="/dashboard">Dashboard</Link>
+        </li>
+      )}
       <li>
         <Link to="/contact">ContactUs</Link>
       </li>
@@ -64,8 +69,16 @@ const Nav = () => {
             {menuItems}
           </ul>
         </div>
+        <div className="navbar-end">
+          <label
+            for="my-drawer-2"
+            class="btn btn-primary drawer-button md:hidden"
+          >
+            Open
+          </label>
+        </div>
       </div>
-      <div className="navbar-end hidden md:flex md:mr-12">
+      <div className="navbar-end hidden md:flex">
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>
       </div>
     </div>

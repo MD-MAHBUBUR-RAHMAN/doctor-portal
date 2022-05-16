@@ -10,6 +10,10 @@ import NotFound from "./Page/Notfound/NotFound";
 import Appointment from "./Page/Appointment/Appointment";
 import SignUp from "./Page/Login/SignUp";
 import RequireAuth from "./Page/Login/RequireAuth";
+import Dashboard from "./Page/Dashbord/Dashboard";
+import MyAppointment from "./Page/Dashbord/MyAppointment";
+import MyReview from "./Page/Dashbord/MyReview";
+import MyHistory from "./Page/Dashbord/MyHistory";
 
 function App() {
   return (
@@ -26,6 +30,18 @@ function App() {
             </RequireAuth>
           }
         />
+        <Route
+          path="/dashboard"
+          element={
+            <RequireAuth>
+              <Dashboard />
+            </RequireAuth>
+          }
+        >
+          <Route index element={<MyAppointment />}></Route>
+          <Route path="review" element={<MyReview />}></Route>
+          <Route path="history" element={<MyHistory />}></Route>
+        </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="*" element={<NotFound />} />
