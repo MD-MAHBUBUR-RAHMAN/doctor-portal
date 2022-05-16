@@ -15,7 +15,7 @@ const Booking = ({ booking, setTreatment }) => {
         </p>
         <p>
           {slots.length}{" "}
-          {slots.length > 0 ? "Slots Available" : "Slot Available"}
+          {slots.length > 0 ? "Slots Available" : "Slot not Available"}
         </p>
         <div className="card-actions justify-center ">
           <label
