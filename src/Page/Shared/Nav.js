@@ -6,6 +6,10 @@ import { signOut } from "firebase/auth";
 
 const Nav = () => {
   const [user, loading, error] = useAuthState(auth);
+  const logOut = () => {
+    signOut(auth);
+    localStorage.removeItem("accessToken");
+  };
   const menuItems = (
     <>
       <li>
@@ -30,7 +34,7 @@ const Nav = () => {
       </li>
       <li>
         {user ? (
-          <button className="btn btn-ghost" onClick={() => signOut(auth)}>
+          <button className="btn btn-ghost" onClick={logOut}>
             signOut
           </button>
         ) : (
@@ -71,8 +75,8 @@ const Nav = () => {
         </div>
         <div className="navbar-end">
           <label
-            for="my-drawer-2"
-            class="btn btn-primary drawer-button md:hidden"
+            htmlFor="dashbordDrawer"
+            className="btn btn-primary drawer-button md:hidden"
           >
             Open
           </label>
