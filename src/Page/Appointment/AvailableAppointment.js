@@ -7,14 +7,14 @@ import Loading from "../Shared/Loading";
 
 const AvailableAppointment = ({ selectedDate }) => {
   const [treatment, setTreatment] = useState(null);
-  const dateQuery = format(selectedDate, "PP");
+  const date = format(selectedDate, "PP");
 
   const {
     data: bookings,
     isLoading,
     refetch,
-  } = useQuery(["available", dateQuery], () =>
-    fetch(`http://localhost:5000/available?date=${dateQuery}`).then((res) =>
+  } = useQuery(["available", date], () =>
+    fetch(`http://localhost:5000/available?date=${date}`).then((res) =>
       res.json()
     )
   );
